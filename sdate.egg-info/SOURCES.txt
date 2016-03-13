@@ -1,0 +1,8 @@
+README.rst
+setup.cfg
+setup.py
+sdate/__init__.py
+sdate.egg-info/PKG-INFO
+sdate.egg-info/SOURCES.txt
+sdate.egg-info/dependency_links.txt
+sdate.egg-info/top_level.txt
