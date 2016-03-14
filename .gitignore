@@ -1,4 +1,4 @@
 *.pyc
-cmds.egg-info
+sdate.egg-info
 build/
 dist/

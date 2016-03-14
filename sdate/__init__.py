@@ -61,7 +61,7 @@ class sdate(object):
         self._minutes = minutes
         self._seconds = seconds
         self._tzstr = tzstr
-        self._dt = datetime.datetime.now(TZ(tzstr=self._tzstr)) - datetime.timedelta(days=self._days,hours=self._hours, minutes=self._minutes,seconds=self._seconds)
+        self._dt = datetime.datetime.now(TZ(tzstr=self._tzstr)) + datetime.timedelta(days=self._days,hours=self._hours, minutes=self._minutes,seconds=self._seconds)
         return self
 
     def tzname(self):
@@ -100,7 +100,7 @@ class sdate(object):
     def date(self):
         return self._dt.strftime("%Y-%m-%d")
     
-    def get_time(self):
+    def time(self):
         return self._dt.strftime("%H:%M:%S")
     
     def unix_timestamp(self):
@@ -133,6 +133,11 @@ class sdate(object):
         '''
         dtstr = datetime.datetime(self.year(), self.month(), self.day(), self.hour(), self.minute(),self.second(), self.microsecond(), TZ(tzstr=self._tzstr)).isoformat()
         return dtstr
+    
+    def from_unix_timestamp(self, unix_timestamp, tzstr="GMT+8"):
+        self._dt = datetime.datetime.fromtimestamp(unix_timestamp, TZ(tzstr=tzstr))
+        self._tzstr = tzstr
+        return self
 
     def __repr__(self):
         return self.__str__()

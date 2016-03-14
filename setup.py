@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 with open('README.rst') as readme:
     long_description = readme.read()
-    
+
 name = "sdate"
 version = "0.1.0"
 author = "qiueer"
