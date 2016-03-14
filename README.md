@@ -134,5 +134,5 @@ pip install sdate
 ## 技术交流
 ```
 GITHUB: https://github.com/qiueer/sdate
-       QQ: 86877295
+QQ: 86877295
 ```
