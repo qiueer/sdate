@@ -89,6 +89,7 @@ Convert unix timestamp to sdate, that we can use it to get more information::
 	'201603140304020'
 	
 Reset sdate, the arguments are same as Constructor::
+
 	>>>sd=sdate().from_unix_timestamp(1457895842)
 	>>>print sd
 	{   'date': '2016-03-14',
@@ -126,13 +127,6 @@ Reset sdate, the arguments are same as Constructor::
 	    'unix_timestamp': 1457931913,
 	    'weekday': 0,
 	    'year': 2016}
-    
-Methods(besides private) that we can use::
-
-	>>> from sdate import sdate
-	>>> dir(sdate)
-	['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__unicode__', '__weakref__', 'date', 'datetime', 'datetime_str', 'day', 'from_unix_timestamp', 'hour', 'iso8601', 'iso8601_ms', 'iso8601_ms_tz', 'iso8601_tz', 'microsecond', 'minute', 'month', 'reset', 'second', 'time', 'tzname', 'unix_timestamp', 'weekofday', 'year']
-
 
 Support + Contributing
 ----------------------
